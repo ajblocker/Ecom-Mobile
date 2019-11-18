@@ -1,6 +1,5 @@
 import React from 'react'
 import { Component } from 'react'
-import Filter from '../Components/Filter';
 
 
 class Product extends Component {
@@ -12,7 +11,7 @@ class Product extends Component {
     //invoked immediately as component mounted
     componentDidMount(){
     //fetch resources to make GET request to endpoint
-    fetch('/api/products')
+    fetch('/products')
     //parses the output to JSON, returns promise
     .then(res => res.json())
     //sets the value of state to the output from the API call

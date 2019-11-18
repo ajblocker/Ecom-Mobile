@@ -6,7 +6,7 @@ const db_Schema = new mongoose.Schema({
         category: { type: String, required: true, unique: true },
         prod_description: { type: String, required: true, unique: true },
         img: { type: String, required: true, unique: true }
-	})
+	},{collection: 'products'})
 
 const Products = mongoose.model('Products', db_Schema)
 module.exports = Products

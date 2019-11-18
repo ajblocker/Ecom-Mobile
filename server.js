@@ -28,7 +28,10 @@ app.get('/api/products', (req, res) => {
 	res.json({message: "API products"})
 })
 
+const productsRouter =  require('./routes/products');
+
 app.use('/api/users', usersRoutes)
+app.use('/products', productsRouter)
 
 app.use('*', (req, res) => {
 	res.sendFile(`${__dirname}/client/build/index.html`)
