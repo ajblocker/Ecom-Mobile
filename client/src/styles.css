@@ -179,14 +179,19 @@ h1{
 }
 /* work */
 .productsPage {
-	padding: 5rem;
+	padding: 10rem;
 	text-align: center;
 }
 .shopWomens{
 	text-align: center;
 }
+.card{
+	width: 25rem;
+	height: 100 rem;
+	margin: 8rem;
+}
 .work{
-    padding: 5rem 0;
+    padding: 10rem 0;
 }
 .work .work-img{
     position: relative;

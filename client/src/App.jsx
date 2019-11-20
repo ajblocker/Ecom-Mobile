@@ -8,6 +8,8 @@ import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Product from './views/Product'
 import Home from './views/Home'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
@@ -42,7 +44,7 @@ class App extends React.Component {
 					<Route path="/signup" render={(props) => {
 						return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
 					}} />
-
+					<Route path="/contact" component={Contact} />
 					<Route path="/products" render={() => {
 						return currentUser
 							? <Product />
@@ -50,7 +52,6 @@ class App extends React.Component {
 					}} />
 
 					<Route path="/" component={Home} />
-
 				</Switch>
 			</div>
 		)

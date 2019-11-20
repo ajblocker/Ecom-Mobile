@@ -1,12 +1,12 @@
 
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt-nodejs')
+const bcrypt = require('bcryptjs')
 
 const userSchema = new mongoose.Schema({
 		name: { type: String },
 		email: { type: String, required: true, unique: true },
 		password: { type: String, required: true }
-	})
+	}, {collection: 'users'})
 
 // adds a method to a user document object to create a hashed password
 userSchema.methods.generateHash = function(password) {
@@ -24,6 +24,7 @@ userSchema.pre('save', function(next) {
 	console.log(`Just triggered the pre save hook`)
 	console.log(this.isModified('password'))
 	if(this.isModified('password')) {
+		console.log("hello world password saved")
 		this.password = this.generateHash(this.password)
 		next()
 	} else {

@@ -7,6 +7,8 @@ const usersRouter = new express.Router()
 
 usersRouter.route('/').get(usersCtrl.index)
 
+usersRouter.route('/products', usersCtrl.products)
+
 usersRouter.route('/').post(usersCtrl.create)
 
 usersRouter.post('/authenticate', usersCtrl.authenticate)
@@ -14,8 +16,6 @@ usersRouter.post('/authenticate', usersCtrl.authenticate)
 usersRouter.use(verifyToken)
 
 usersRouter.route('/:id').get(usersCtrl.show)
-
-usersRouter.route('/api/products', usersCtrl.get)
 
 usersRouter.route('/:id').patch(usersCtrl.update)
 

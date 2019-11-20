@@ -9,6 +9,12 @@ module.exports = {
 		})
 	},
 
+	products: (req, res) => {
+		Products.find({}, (err, users) => {
+			res.json(users)
+		})
+	},
+
 	// get one user
 	show: (req, res) => {		
 		User.findById(req.params.id, (err, user) => {
@@ -18,9 +24,13 @@ module.exports = {
 
 	// create a new user
 	create: (req, res) => {
+		console.log("about to create new user")
 		User.create(req.body, (err, user) => {
+			console.log(err)
 			if(err) return res.json({success: false, code: err.code})
 			// once user is created, generate a JWT and return to client"
+			console.log("created new user")
+			console.log(user)
 			const token = signToken(user)
 			res.json({success: true, message: "The user has been created. Token attached.", token})
 		})
@@ -51,9 +61,10 @@ module.exports = {
 			// if there's no user or the password is invalid
 			if(!user || !user.validPassword(req.body.password)) {
 				// deny access
+				console.log(user)
 				return res.json({success: false, message: "Invalid credentials."})
 			}
-
+			console.log(user)
 			const token = signToken(user)
 			res.json({success: true, message: "The Token has been attached.", token})
 		})
