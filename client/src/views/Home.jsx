@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from './Main';
-import Pricing from '../components/Pricing';
-import Footer from '../components/Footer';
+import Pricing from './Pricing';
+import Footer from './Footer';
 
 const Home = (props) => {
 	return (
