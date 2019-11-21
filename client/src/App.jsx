@@ -6,7 +6,7 @@ import NavBar from './NavBar'
 import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
-import Product from './views/Product'
+import Product from './components/Product'
 import Home from './views/Home'
 import Contact from './views/Contact'
 
