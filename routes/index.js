@@ -5,7 +5,7 @@ const verifyToken = require('../auth').verifyToken
 
 const usersRouter = new express.Router()
 
-//unproteted routes
+//unprotected routes
 usersRouter.route('/').get(usersCtrl.index)
 
 usersRouter.route('/products', usersCtrl.products)

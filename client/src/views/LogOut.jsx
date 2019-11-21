@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 
 class LogOut extends React.Component {
 
+	//redirects to login when logged out
 	componentDidMount() {
 		this.props.onLogOut()
 	}

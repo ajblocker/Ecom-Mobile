@@ -45,6 +45,7 @@ class App extends React.Component {
 					}} />
 					<Route path="/contact" component={Contact} />
 					<Route path="/products" render={() => {
+						//redirects to login page on signup/login
 						return currentUser
 							? <Product />
 							: <Redirect to="/login" />
