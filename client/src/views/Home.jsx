@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from '../components/Main';
+import Main from './Main';
 import Pricing from '../components/Pricing';
 import Footer from '../components/Footer';
 
