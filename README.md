@@ -1,3 +1,18 @@
+#Project 6 eCommerce Platform Refactor
+
+Project 6 Ecommerce Platform website consists of refactoring Project 3. Below is the following requirments:
+
+- All web pages must be written in ReactJS
+- Auth process must use bcrypt encryption protocol and JWT
+- Must meet good-quality coding standards (indentation, scoping, naming, etc.)
+- Must deploy your repo to GitHub (professionally composed) 
+- Must migrate to MongoDB, integrate with Atlas, and seed Atlas with a set of data
+- Must include Login and Signup, demonstrating access to protected admin page and protected route 
+- Admin page only needs to be active for ‘read’ method of  CRUD
+- Be sure to create a new repo from your Project 3 Repo (eCommerce Application)
+- Refactor your eCommerce PlatformYour project must be deployed to Heroku cloud
+- Include the Link to the live site in your GitHub repo
+
 # React Application with JWT Authentication
 
 ### Overview

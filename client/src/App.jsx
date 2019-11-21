@@ -8,7 +8,7 @@ import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Product from './views/Product'
 import Home from './views/Home'
-import Contact from './components/Contact'
+import Contact from './views/Contact'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
