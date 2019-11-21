@@ -1,4 +1,4 @@
-#Project 6 eCommerce Platform Refactor
+# Project 6 eCommerce Platform Refactor
 
 Project 6 Ecommerce Platform website consists of refactoring Project 3. Below is the following requirments:
 

@@ -4,10 +4,14 @@ const express = require('express')
 const logger = require('morgan')
 const mongoose = require('mongoose')
 const usersRoutes = require('./routes')
+// var cookie = require('cookie');
 
 const Product = require("./models/Products")
 
 const app = express()
+
+// response.cookie('same-site-cookie', 'foo', { sameSite: 'lax' });
+// response.cookie('cross-site-cookie', 'bar', { sameSite: 'none', secure: true });
 
 const MONGODB_URI = process.env.ATLAS_URI || 'mongodb://localhost/auth'
 const PORT = process.env.PORT || 5000
