@@ -1,5 +1,5 @@
 import React from 'react';
-import Forms from '../Components/Forms';
+import Forms from '../components/Forms';
 
 class Contact extends React.Component {
     state = {

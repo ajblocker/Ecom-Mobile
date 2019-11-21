@@ -26,20 +26,28 @@ app.use(express.urlencoded({ extended: true }));
 // app.use('/users', usersRoutes)
 //app.use('/api', productsRouter)
 
-app.get('/api', (req, res) => {
-	res.json({message: "API root"})
+app.use('/api', (req, res, next) => {
+	//res.json({message: "API root"})
+	console.log(`New http transaction`)
+	console.log(req.url)
+	console.log(req.method)
+	next()
 })
 
 app.use('/api/users', usersRoutes)
 
 app.get('/api/products', (req, res) => {
-	Product.find().then(dbUser => res.json(dbUser))
-	.catch(err => res.send(err))
+	Product.find().then(dbUser => {
+		console.log(dbUser)
+		res.json(dbUser)})
+	.catch(err => {
+		console.log(err)
+		res.send(err)})
 	// res.json({products: [1,2,3]})
 })
 
 app.get('/api/contacts', (req, res) => {
-	var products = 
+	// var products = 
 	res.json({message: "API contacts"})
 })
 

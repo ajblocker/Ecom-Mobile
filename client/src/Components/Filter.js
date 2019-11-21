@@ -1,12 +1,12 @@
 import React from "react";
-import ProductsArray from "../products.json";
-import Product from "../views/Product";
+import ListProduct from "./ListProduct";
+import { tsPropertySignature } from "@babel/types";
 
 class Products extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
-      products: ProductsArray,
+      products: props.data,
       //not using at moment
       maxPrice: false,
       minPrice: false,
@@ -32,15 +32,15 @@ class Products extends React.Component {
     // If Max Price, Remove Products that are above that Value
     //filters through product and their prices
     if(maxPrice){
-        filteredProducts = filteredProducts.filter(product => product.price <= parseInt(maxPrice));
+        filteredProducts = filteredProducts && filteredProducts.filter(product => product.price <= parseInt(maxPrice));
     }
     if(minPrice){
-      filteredProducts = filteredProducts.filter(product => product.price <= parseInt(minPrice));
+      filteredProducts = filteredProducts && filteredProducts.filter(product => product.price <= parseInt(minPrice));
   }
   //filters through products and their types
   //skips over if "All", and compare
     if(type !== "All"){
-      filteredProducts = filteredProducts.filter(product => product.type === type);
+      filteredProducts = filteredProducts && filteredProducts.filter(product => product.type === type);
     }
 
     return (
@@ -100,13 +100,13 @@ class Products extends React.Component {
                 </div>
               </div>
               <div className="row">
-                  {filteredProducts.map((product, index) => {
+                  {filteredProducts && filteredProducts.map((product, index) => {
                     return (
                       <div key={index}>
                         <div className="work" />
                         <div className="filter">
                           {/* connects with Product.js */}
-                          <Product product={product} />
+                          <ListProduct product={product} />
                         </div>
                       </div>
                       );

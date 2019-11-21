@@ -1,23 +1,26 @@
 import React from 'react'
 import { Component } from 'react'
-import Filter from '../Components/Filter'
+import Filter from '../components/Filter'
 
 
 class Product extends Component {
-    state = {
+constructor(props) {
+    super(props);
+    this.state = {
       products: [],
       error: false
     }
+}
   
     //invoked immediately as component mounted
     componentDidMount(){
-    //fetch resources to make GET request to endpoint
-    fetch('/api/products')
-    //parses the output to JSON, returns promise
-    .then(res => res.json())
-    //sets the value of state to the output from the API call
-    .then((data) => {
-        this.setState({ products: data })
+        //fetch resources to make GET request to endpoint
+        fetch('/api/products')
+        //parses the output to JSON, returns promise
+        .then(res => res.json())
+        //sets the value of state to the output from the API call
+        .then((data) => {
+            this.setState({ products: data })
     })
     //logs any error
     .catch(err => {
@@ -31,8 +34,9 @@ class Product extends Component {
     // let filteredContacts = contacts;
 
         return (
-            <div className="row products" >
+            <div>
                 <Filter/>
+            <div className="row products" >
             {this.state.products.map(product => {
                 return <div className="col-4" >
                     <div className="card">
@@ -47,6 +51,7 @@ class Product extends Component {
                     </div>
                 </div>
             })}
+        </div>
         </div>
         )
     }
