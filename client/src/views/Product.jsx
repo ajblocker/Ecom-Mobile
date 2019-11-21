@@ -1,6 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
-import Filter from '../components/Filter'
+import Filter from './Filter'
 
 
 class Product extends Component {

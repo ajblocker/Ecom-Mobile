@@ -1,5 +1,5 @@
 import React from "react";
-import ListProduct from "./ListProduct";
+import ListProduct from "../components/ListProduct";
 import { tsPropertySignature } from "@babel/types";
 
 class Products extends React.Component {
