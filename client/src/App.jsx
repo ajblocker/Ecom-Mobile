@@ -9,7 +9,6 @@ import SignUp from './views/SignUp'
 import Product from './views/Product'
 import Home from './views/Home'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
