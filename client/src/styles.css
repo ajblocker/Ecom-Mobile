@@ -106,11 +106,11 @@ body, html{
 			display: none;
 		}
 		.product-header {
-			width: 375px;
+			width: 200px;
 		}
 		.price-filter{
 			padding: 20px;
-			width: 375px;
+			width: 200px;
 		}
 
 		.navbar-brand{
@@ -139,11 +139,14 @@ body, html{
 			align-items: center;
 			justify-content: center;
 			margin: 0;
-			width: 375px;
+			width: 200px;
+		}
+		.pricingHeader, .lead{
+			margin-left: 100px;
 		}
 		.card-price{
 			text-align: center;
-			margin-left: 50px;
+			margin-left: 100px;
 			
 	}	
 	
