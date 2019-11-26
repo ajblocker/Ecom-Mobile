@@ -6,21 +6,21 @@ class Forms extends React.Component {
             <div className="row">
               <div className="col-md-8 mx-auto">
                         <form>
-                            <label>
                         <fieldset className="form-group">
                             <input type="text" className="form-control-sm" id="firstName" placeholder="First Name..." required/>
                         </fieldset>
                         <fieldset className="form-group">
                             <input type="text" className="form-control-sm" id="lastName" placeholder="Last Name..." required/>
                         </fieldset>
+                        <label>
                         <fieldset className="form-group"><input type="email" className="form-control-sm" id="email" placeholder="Email..." required/></fieldset>
                         <fieldset className="form-group"><input type="password" className="form-control-sm" id="password" placeholder="Password..." required/></fieldset>
+                        </label>
                         <fieldset className="form-group"><input type="text" className="form-control-sm" id="subject" placeholder="Subject..." required/></fieldset>
                         <fieldset className="form-group">
                             <textarea className="form-control-sm" id="message" placeholder="Message..." rows="3" required/>
                         </fieldset>
                         <button type="submit" className="btn btn-outline-info btn-block">Submit</button>
-                        </label>
                     </form>
                 </div>
             </div>
