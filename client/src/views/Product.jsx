@@ -35,7 +35,7 @@ constructor(props) {
 
         return (
             <div>
-                {/* <Filter/> */}
+                <Filter/>
             <div className="row products" >
             {this.state.products.map(product => {
                 return <div className="col-4" >
