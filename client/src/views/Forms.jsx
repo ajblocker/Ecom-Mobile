@@ -1,4 +1,5 @@
 import React from 'react';
+import 'milligram';
 
 class Forms extends React.Component {
     render() {

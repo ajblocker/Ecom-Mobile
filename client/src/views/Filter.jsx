@@ -50,7 +50,7 @@ class Products extends React.Component {
             <div className="row">
               <div className="col-12">
                 <div className="product-header">
-                  <h2>THE STASH</h2>
+                  <h2 className="stash">THE STASH</h2>
                   <p className="ShopMens">Shop Men's </p>
                 </div>
               </div>

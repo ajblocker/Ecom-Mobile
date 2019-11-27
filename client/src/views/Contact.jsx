@@ -1,5 +1,6 @@
 import React from 'react';
 import Forms from '../views/Forms';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Contact extends React.Component {
     state = {
