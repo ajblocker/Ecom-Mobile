@@ -13,6 +13,7 @@ Project 6 PWA Mobile App consists of the following requirements:
 
 # Below is the Lighthouse audit website 
 ![alt text](pwa.png)
+![alt text](pwa2.png)
 
 # Below are screenshots of the homescreen and working app
 ![alt text](homescreen.png)

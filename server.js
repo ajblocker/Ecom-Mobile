@@ -23,7 +23,6 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-
 // app.use('/users', usersRoutes)
 //app.use('/api', productsRouter)
 
@@ -46,7 +45,6 @@ app.get('/api/products', (req, res) => {
 	.catch(err => {
 		console.log(err)
 		res.send(err)})
-	// res.json({products: [1,2,3]})
 })
 
 
