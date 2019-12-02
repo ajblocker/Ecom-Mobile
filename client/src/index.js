@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'milligram'
-import './styles.css'
+import './style.min.css'
 import * as serviceWorker from './serviceworker'
 
 import App from './App'
